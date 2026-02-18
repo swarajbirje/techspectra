@@ -1,0 +1,72 @@
+/* ADMIN TABLE STYLING */
+body {
+  background: linear-gradient(135deg, #020617, #0b1120);
+  color: #e5e7eb;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: #38bdf8;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Table container */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(56,189,248,0.2);
+}
+
+/* Table header */
+th {
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  color: #0f172a;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table cells */
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Row hover effect */
+tbody tr:hover {
+  background: rgba(56,189,248,0.1);
+  transition: 0.3s;
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th {
+    display: none;
+  }
+  td {
+    border: none;
+    padding: 10px;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
