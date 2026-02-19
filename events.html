@@ -1,173 +1,182 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Events - TechSpectra</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .grid {
-  display: flex;
-  justify-content: space-evenly;
-  /* grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); */
-  gap: 15px;
-  flex-wrap: wrap
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
 
-.card {
-  background: rgba(255,255,255,0.08);
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
-}
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: 0.4s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 25px rgba(56,189,248,0.4);
-}
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #38bdf8;
-}
+    .card h3 {
+      margin-bottom: 15px;
+      color: #38bdf8;
+      font-size: 1.5rem;
+    }
 
-.card img {
-  width: 100%;
-  height: 150px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-.btn-theme {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #3498db;   
-  color: #fff;                 
-  text-decoration: none;       
-  border-radius: 5px;          
-  font-weight: 600;            
-  transition: all 0.3s ease;   
-}
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-.btn-theme:hover {
-  background-color: #2980b9;   
-  color: #f1f1f1;              
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+    .btn-theme {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
 
+    .btn-theme:hover {
+      background: linear-gradient(135deg, #2980b9, #3498db);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <nav>
-    <h1>TechSpectra</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <h1>TechSpectra</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section>
-  <h2>All Events</h2>
-  <div class="grid">
-  <!-- Communication -->
-  <div class="card">
-    <h3>Communication</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Communication" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Coding -->
-  <div class="card">
-    <h3>Coding</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Coding" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Designing -->
-  <div class="card">
-    <h3>Designing</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Designing" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Quiz -->
-  <div class="card">
-    <h3>Quiz</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Quiz" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Start-Up -->
-  <div class="card">
-    <h3>Start-Up</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Start-Up" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Cultural -->
-  <div class="card">
-    <h3>Cultural</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Cultural" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Lan-Gaming -->
-  <div class="card">
-    <h3>Lan-Gaming</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Lan-Gaming" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Photography -->
-  <div class="card">
-    <h3>Photography</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Photography" class="btn-theme">
-      View Details
-    </a>
-  </div>
-  
-  <!-- Reel-Making -->
+  <section>
+    <h2>All Events</h2>
+    <div class="grid">
+      <!-- Communication -->
+      <div class="card">
+        <h3>Communication</h3>
+        <img src="assets/communication.jpeg" alt="image">
+        <a href="event-details.php?event=Communication" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Coding -->
+      <div class="card">
+        <h3>Coding</h3>
+        <img src="assets/coding.jpeg" alt="Coding">
+        <a href="event-details.php?event=Coding" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Designing -->
+      <div class="card">
+        <h3>Designing</h3>
+        <img src="assets/designing.jpeg" alt="image">
+        <a href="event-details.php?event=Designing" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Quiz -->
+      <div class="card">
+        <h3>Quiz</h3>
+        <img src="assets/quiz.jpeg" alt="image">
+        <a href="event-details.php?event=Quiz" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Start-Up -->
+      <div class="card">
+        <h3>Start-Up</h3>
+        <img src="assets/start up.jpeg" alt="image">
+        <a href="event-details.php?event=Start-Up" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Cultural -->
+      <div class="card">
+        <h3>Cultural</h3>
+        <img src="assets/Cultural 2.jpeg" alt="image">
+        <a href="event-details.php?event=Cultural" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Lan-Gaming -->
+      <div class="card">
+        <h3>Lan-Gaming</h3>
+        <img src="assets/lan gaming.jpeg" alt="image">
+        <a href="event-details.php?event=Lan-Gaming" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Photography -->
+      <div class="card">
+        <h3>Cinematics</h3>
+        <img src="assets/ceinematics.jpeg" alt="image">
+        <a href="event-details.php?event=Photography" class="btn-theme">
+          View Details
+        </a>
+      </div>
+
+      <!-- Reel-Making
   <div class="card">
     <h3>Reel-Making</h3>
     <img src="12.jpg" alt="image" >
     <a href="event-details.php?event=Reel-Making" class="btn-theme">
       View Details
     </a>
-  </div>
-  
-  <!-- Treasure-Hunt -->
-  <div class="card">
-    <h3>Treasure-Hunt</h3>
-    <img src="12.jpg" alt="image" >
-    <a href="event-details.php?event=Treasure-Hunt" class="btn-theme">
-      View Details
-    </a>
-  </div>
+  </div> -->
 
-  </div>
-</section>
+      <!-- Treasure-Hunt -->
+      <div class="card">
+        <h3>Treasure-Hunt</h3>
+        <img src="assets/Treasure hunt.jpeg" alt="image">
+        <a href="event-details.php?event=Treasure-Hunt" class="btn-theme">
+          View Details
+        </a>
+      </div>
 
-<footer>
-  <p>© 2026 TechSpectra</p>
-  
-</footer>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 TechSpectra</p>
+  </footer>
 
 </body>
+
 </html>
